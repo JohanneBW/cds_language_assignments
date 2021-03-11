@@ -18,9 +18,9 @@ In particular, it will build networks based on entities appearing together in th
  git clone https://github.com/JohanneBW/cds_language_assignments.git
  ```
 **step 2: Run bash script:**
-- Navigate to the folder "assignment6".
+- Navigate to the folder "Assignment6".
 ```console
-cd assignment6
+cd Assignment6
 ```  
 - Use the bash script _run-script.sh_ to set up environment and run the script:  
 ```console
