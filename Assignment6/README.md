@@ -15,7 +15,7 @@ In particular, it will build networks based on entities appearing together in th
 - Navigate to destination for repo
 - type the following command
  ```console
- git clone 
+ git clone https://github.com/JohanneBW/cds_language_assignments.git
  ```
 **step 2: Run bash script:**
 - Navigate to the folder "assignment6".
