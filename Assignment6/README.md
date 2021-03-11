@@ -23,5 +23,5 @@ cd Assignment6
 ```console
 bash run-script.sh
 ```  
-The bash script will print out '....` when it is done running. 
+The bash script will print out "Done, the visualization is located in the 'viz' folder and the data frame in the 'output' folder" when it is done running. 
 
