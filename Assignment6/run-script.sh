@@ -13,7 +13,7 @@ pip install --upgrade pip
 test -f requirements.txt && pip install requirements.txt
 
 #parameters
-file=${1:-"data/king_james_bible.csv"}
+filepath=${1:-"data/king_james_bible.csv"}
 
 
 #run script
