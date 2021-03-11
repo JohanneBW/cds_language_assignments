@@ -4,10 +4,7 @@
 The purpose with this assignment is to make a command-line tool which will take a given dataset and perform simple network analysis. 
 In particular, it will build networks based on entities appearing together in the same documents.
 
-- The script should be able to be run from the command line
-- It should take any CSV file as an input, as long as that CSV file has a column called "text"
-- For any given CSV file, it should create a weighed edgelist of named entities, based on document co-ocurrence. This should be used to create a network visualization, which will be saved in a folder called viz.
-- It should also create a data frame showing the degree, betweenness, and eigenvector centrality for each node. It should save this as a CSV in a folder called output.
+For any given CSV file, with a column called 'text', create a weighed edgelist of named entities, based on document co-ocurrence. This will be used to create a network visualization, which will be saved in a folder called viz. It will also create a data frame showing the degree, betweenness, and eigenvector centrality for each node. It will save this as a CSV in a folder called output."
 
 ## How to run
 **Step 1: Clone repo**
