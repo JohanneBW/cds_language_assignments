@@ -13,8 +13,8 @@ pip install --upgrade pip
 test -f requirements.txt && pip install requirements.txt
 
 #parameters
-filepath=${1:-"data/king_james_bible.csv"}
-edgeweight=${2:->500}
+#filepath=${1:-"data/king_james_bible.csv"}
+#edgeweight=${2:->500}
 
 #run script
 python3 assignment_w6.py --file $file
