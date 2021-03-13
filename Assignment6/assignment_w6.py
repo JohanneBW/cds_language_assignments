@@ -61,8 +61,6 @@ def main():
     text_entities = []
 
     # Loop over the text in the text column of the df
-    text_entities = []
-
     for text in tqdm(data_df["text"]):
         # create temporary list 
         tmp_entities = []
