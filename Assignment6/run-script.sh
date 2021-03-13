@@ -9,12 +9,11 @@ source $VENVNAME/bin/activate
 #Upgrade pip
 pip install --upgrade pip
 
-# problems when installing from requirements.txt
+# test and install from requirements.txt
 test -f requirements.txt && pip install requirements.txt
 
-#parameters
-#filepath=${1:-"data/king_james_bible.csv"}
-#edgeweight=${2:->500}
+# download NLP model 
+python -m spacy download en_core_web_sm
 
 #run script
 python3 assignment_w6.py --file $file
