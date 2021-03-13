@@ -33,10 +33,8 @@ def main():
     ap = argparse.ArgumentParser(description = "[INFO] Create a weighed edgelist of named entities, based on document co-ocurrence"
                                  
     # File 
-    ap.add_argument("-f", "--filepath", required = False,
-                    type = str, help = "file from path e.g. 'data/file.csv'")
-    # Edge weight
-    ap.add_argument("-e", "--edgeweight", required = False, type = int, help = "define a cut-off point to filter data")    
+    ap.add_argument("-i", "--filepath", required = True,
+                    type = str, help = "file from path e.g. 'data/file.csv'")  
         
     args = vars(ap.parse_args())
     
@@ -51,7 +49,7 @@ def main():
         data = pd.read_csv(filepath)
         if 'text' in data.columns:
             # Make a df with the data
-            text_df = pd.DataFrame(data)
+            data_df = pd.DataFrame(data)
     else:
         print("The file needs to be a csv file and have a column called 'text'")                                                                                                        
     
@@ -63,14 +61,15 @@ def main():
     text_entities = []
 
     # Loop over the text in the text column of the df
-    for text in tqdm(text_df["text"]):
+    text_entities = []
+
+    for text in tqdm(data_df["text"]):
         # create temporary list 
         tmp_entities = []
         # create doc object
         doc = nlp(text)
         # for every named entity
         for entity in doc.ents:
-            # append to temp list
             tmp_entities.append(entity.text)
         # append temp list to main list
         text_entities.append(tmp_entities)
@@ -113,21 +112,20 @@ def main():
     ----------- Filter based on edgeweight -----------
     """                                 
     
-    edgeweight = args["edgeweight"]
                                  
-    filtered = edges_df[edges_df["weight"]edgeweight]                             
+    filtered = edges_df[edges_df["weight"]>500]                            
                                  
                                  
     """
     ----------- Create network -----------
     """                                
     # Create a graph object called G
-    G=nx.from_pandas_edgelist(filtered, 'nodeA', 'nodeB', ["weight"])
+    G = nx.from_pandas_edgelist(filtered, "nodeA", "nodeB", ["weight"])
                                
     # Plot it
     pos = nx.nx_agraph.graphviz_layout(G, prog="neato")                             
                                  
-    nx.draw(G, pos, with_labels=True, node_size=20, font_size=10)
+    fig = nx.draw(G, pos, with_labels=False, node_size=20, font_size=10)
     
     # Save the vizualization in the viz folder                             
     plt.savefig("viz/network.png", dpi=300, bbox_inches="tight")  
@@ -138,20 +136,23 @@ def main():
     """                              
     
     # Find the eigenvector centrality                            
-    ev = nx.eigenvector_centrality(G)                             
+    ev = nx.eigenvector_centrality(G)                            
     
     # Make df with the eigenvector centrality                              
-    ev_df = pd.DataFrame(ev.items())
+    ev_df = pd.DataFrame(ev.items(), columns=["nodeA", "eigenvector"])
                                  
     # Find betweenness centrality
     bc = nx.betweenness_centrality(G)                             
                                  
     # Make df with the betweenness centrality
-    bc_df = pd.DataFrame(bc.items())                             
+    bc_df = pd.DataFrame(bc.items(), columns=["nodeA", "betweenness"])                             
                                  
     # Merge the three data frames into one
-                                 
-                                 
+    measure_df = pd.merge(bc_df, ev_df, how="inner", on=["nodeA"])
+    measure_df = pd.merge(measure_df, filtered, how="inner", on=["nodeA"])
+    
+    # Save the merged df as a csv in the output folder                             
+    measure_df.to_csv("../output/measure.csv")                             
                                  
 #Define behaviour when called from command line
 if __name__ == "__main__":
