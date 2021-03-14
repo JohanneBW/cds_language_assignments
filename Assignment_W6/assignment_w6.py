@@ -58,9 +58,8 @@ def main():
     """
     
     # Create empty list were the entities will be stored
-    text_entities = []
+   text_entities = []
 
-    # Loop over the text in the text column of the df
     for text in tqdm(data_df["text"]):
         # create temporary list 
         tmp_entities = []
@@ -143,14 +142,14 @@ def main():
     bc = nx.betweenness_centrality(G)                             
                                  
     # Make df with the betweenness centrality
-    bc_df = pd.DataFrame(bc.items(), columns=["nodeA", "betweenness"])                             
-                                 
+    bc_df = pd.DataFrame(bc.items(), columns=["nodeA", "betweenness"])   
+                                                                                                         
     # Merge the three data frames into one
     measure_df = pd.merge(bc_df, ev_df, how="inner", on=["nodeA"])
     measure_df = pd.merge(measure_df, filtered, how="inner", on=["nodeA"])
     
     # Save the merged df as a csv in the output folder                             
-    measure_df.to_csv("../output/measure.csv")                             
+    measure_df.to_csv("output/measure.csv")                             
                                  
 #Define behaviour when called from command line
 if __name__ == "__main__":
