@@ -118,10 +118,8 @@ def main():
     # Create a graph object called G
     G = nx.from_pandas_edgelist(filtered, "nodeA", "nodeB", ["weight"])
                                
-    # Plot it
-    pos = nx.nx_agraph.graphviz_layout(G, prog="neato")                             
-                                 
-    fig = nx.draw(G, pos, with_labels=False, node_size=20, font_size=10)
+    # Plot it                                                      
+    fig = nx.draw_random(G, with_labels=False, node_size=20, font_size=10)
     
     # Save the vizualization in the viz folder                             
     plt.savefig("viz/network.png", dpi=300, bbox_inches="tight")  
