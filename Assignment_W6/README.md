@@ -15,9 +15,9 @@ For any given CSV file, with a column called 'text', create a weighed edgelist o
  git clone https://github.com/JohanneBW/cds_language_assignments.git
  ```
 **step 2: Run bash script:**
-- Navigate to the folder "Assignment6".
+- Navigate to the folder "Assignment_W6".
 ```console
-cd Assignment6
+cd Assignment_W6
 ```  
 - Use the bash script _run-script.sh_ to set up environment and run the script:  
 ```console
