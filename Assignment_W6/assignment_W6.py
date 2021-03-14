@@ -33,8 +33,7 @@ def main():
     ap = argparse.ArgumentParser(description = "[INFO] Create a weighed edgelist of named entities, based on document co-ocurrence"
                                  
     # File 
-    ap.add_argument("-i", "--filepath", required = True,
-                    type = str, help = "file from path e.g. 'data/file.csv'")  
+    ap.add_argument("-i", "--path", required=True, help="Path to data folder")  
         
     args = vars(ap.parse_args())
     
@@ -43,7 +42,7 @@ def main():
     """
     
     # Only make a df if the file is a csv file and have a column called 'text'
-    filepath = args["filepath"]
+    filepath = args["path"]
                                  
     if filepath.endswith(".csv"): 
         data = pd.read_csv(filepath)
