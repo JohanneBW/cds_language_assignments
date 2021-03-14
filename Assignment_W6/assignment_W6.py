@@ -146,7 +146,9 @@ def main():
     measure_df = pd.merge(measure_df, filtered, how="inner", on=["nodeA"])
     
     # Save the merged df as a csv in the output folder                             
-    measure_df.to_csv("output/measure.csv")                             
+    measure_df.to_csv("output/measure.csv")
+                                 
+    print("DONE, the vizualization is located in the 'viz' folder and the csv is located in the 'output' folder")                           
                                  
 #Define behaviour when called from command line
 if __name__ == "__main__":
