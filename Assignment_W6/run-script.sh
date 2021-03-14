@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #Environment name
-VENVNAME=assignment_w6
+VENVNAME=assignment_W6
 
 #Activate environment
 source $VENVNAME/bin/activate
