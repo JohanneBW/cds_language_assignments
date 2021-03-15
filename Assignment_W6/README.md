@@ -14,7 +14,7 @@ For any given CSV file, with a column called 'text', create a weighed edgelist o
  ```console
  git clone https://github.com/JohanneBW/cds_language_assignments.git
  ```
-**step 2: Run bash script:**
+**step 2: Set up enviroment:**
 - Navigate to the folder "Assignment_W6".
 ```console
 cd Assignment_W6
@@ -23,5 +23,11 @@ cd Assignment_W6
 ```console
 bash create_venv.sh
 ```  
-
-
+**step 3: Run the program:**
+- Navigate to the folder "Assignment_W6" if you are not already there
+- Run the program with a csv as input:
+```console
+python3 assignment_W6.py -i "data/king_james_bible.csv"
+```  
+**step 4: Output:**
+- Check the 'viz' and 'output' folder to see vizualization and edgelist
