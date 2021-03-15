@@ -9,7 +9,7 @@ For any given CSV file, with a column called 'text', create a weighed edgelist o
 ## How to run
 **Step 1: Clone repo**
 - open terminal
-- Navigate to destination for repo
+- Navigate to destination you want the repo
 - type the following command
  ```console
  git clone https://github.com/JohanneBW/cds_language_assignments.git
@@ -19,9 +19,9 @@ For any given CSV file, with a column called 'text', create a weighed edgelist o
 ```console
 cd Assignment_W6
 ```  
-- Use the bash script _run-script.sh_ to set up environment and run the script:  
+- Use the bash script _create_venv.sh_ to set up environment:  
 ```console
-bash run-script.sh
+bash create_venv.sh
 ```  
-The bash script will print out "Done, the visualization is located in the 'viz' folder and the data frame in the 'output' folder" when it is done running. 
+
 
