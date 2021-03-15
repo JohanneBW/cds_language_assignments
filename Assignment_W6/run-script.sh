@@ -16,10 +16,7 @@ test -f requirements.txt && pip install requirements.txt
 python -m spacy download en_core_web_sm
 
 #run script
-python3 assignment_W6.py -i
+python3 assignment_W6.py 
 
 #deactivate environment
 deactivate
-
-#Print to terminal
-echo "Done, the visualization is located in the 'viz' folder and the data frame in the 'output' folder'"
