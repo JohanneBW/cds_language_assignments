@@ -17,6 +17,7 @@ For any given CSV file, with a column called 'text', create a weighed edgelist o
 **step 2: Set up enviroment:**
 - Navigate to the folder "Assignment_W6".
 ```console
+cd cds_language_assignments
 cd Assignment_W6
 ```  
 - Use the bash script _create_venv.sh_ to set up environment:  
