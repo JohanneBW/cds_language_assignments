@@ -16,7 +16,7 @@ test -f requirements.txt && pip install requirements.txt
 python -m spacy download en_core_web_sm
 
 #run script
-python3 assignment_W6.py --file $file
+python3 assignment_W6.py -i
 
 #deactivate environment
 deactivate
