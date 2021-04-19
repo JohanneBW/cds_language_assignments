@@ -16,7 +16,7 @@ NB: We use pretrained GloVe embedding for the assignment and these will be downl
 - Navigate to destination you want the repo
 - type the following command
  ```console
- git clone https://github.com/JohanneBW/cds_visual_assignments.git
+ git clone https://github.com/JohanneBW/cds_language_assignments.git
  ```
 **step 2: Set up enviroment, download pretrained embeddigs and run program:**
 - Navigate to the folder "Assignment_6".
