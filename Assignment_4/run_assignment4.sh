@@ -9,7 +9,7 @@ pip install --upgrade pip
 test -f requirements.txt && pip install -r requirements.txt
 
 # run script
-python3 network.py
+python3 network.py -i "data/king_james_bible.csv"
 
 deactivate
 echo "build $VENVNAME"
