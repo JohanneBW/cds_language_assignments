@@ -33,7 +33,7 @@ def main():
     ap = argparse.ArgumentParser(description = "[INFO] Create a weighed edgelist of named entities, based on document co-ocurrence"
                                  
     # File 
-    ap.add_argument("-i", "--path", required=True, help="Path to data folder")  
+    ap.add_argument("-i", "--path", default = "data/king_james_bible.csv", help="Path to data folder")  
         
     args = vars(ap.parse_args())
     
