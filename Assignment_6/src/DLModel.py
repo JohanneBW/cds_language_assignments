@@ -67,22 +67,21 @@ def plot_history(H, epochs):
 def create_embedding_matrix(filepath, word_index, embedding_dim):
   """ 
   A helper function to read in saved GloVe embeddings and create an embedding matrix
-
   filepath: path to GloVe embedding
   word_index: indices from keras Tokenizer
   embedding_dim: dimensions of keras embedding layer
   """
-  vocab_size = len(word_index) + 1  # Adding again 1 because of reserved 0 index
-  embedding_matrix = np.zeros((vocab_size, embedding_dim))
+    vocab_size = len(word_index) + 1  # Adding again 1 because of reserved 0 index
+    embedding_matrix = np.zeros((vocab_size, embedding_dim))
 
-  with open(filepath) as f:
-    for line in f:
-      word, *vector = line.split()
-      if word in word_index:
-        idx = word_index[word] 
-        embedding_matrix[idx] = np.array(vector, dtype=np.float32)[:embedding_dim]
+    with open(filepath) as f:
+        for line in f:
+            word, *vector = line.split()
+            if word in word_index:
+                idx = word_index[word] 
+                embedding_matrix[idx] = np.array(vector, dtype=np.float32)[:embedding_dim]
      
-    return embedding_matrix  
+    return embedding_matrix   
   
 """
 ---------- Main function ----------
