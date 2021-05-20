@@ -34,7 +34,7 @@ def main():
     ap = argparse.ArgumentParser(description = "[INFO] Create a weighed edgelist of named entities, based on document co-ocurrence"
                                  
     # File 
-    ap.add_argument("-i", "--path", default = "data/king_james_bible.csv", help="Path to data folder")  
+    ap.add_argument("-i", "--path", default = "../data/king_james_bible.csv", help="Path to data folder")  
         
     args = vars(ap.parse_args())
     
@@ -147,7 +147,7 @@ def main():
     measure_df = pd.merge(measure_df, filtered, how="inner", on=["nodeA"])
     
     # Save the merged df as a csv in the output folder                             
-    measure_df.to_csv("output/measure.csv")
+    measure_df.to_csv("../output/measure.csv")
                                  
     print("DONE, the vizualization is located in the 'viz' folder and the csv is located in the 'output' folder")                           
                                  
