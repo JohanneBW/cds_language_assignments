@@ -1,0 +1,8 @@
+pprint
+pandas
+spacy
+seaborn
+matplotlib
+pyLDAvis
+nltk
+gensim
