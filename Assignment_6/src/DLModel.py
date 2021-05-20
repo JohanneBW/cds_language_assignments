@@ -45,26 +45,26 @@ import matplotlib.pyplot as plt
 """    
   
 def plot_history(H, epochs):
-  """
-  Utility function for plotting model history using matplotlib
-  H: model history 
-  epochs: number of epochs for which the model was trained
-  """
-  plt.style.use("fivethirtyeight")
-  fig = plt.figure()
-  plt.plot(np.arange(0, epochs), H.history["loss"], label="train_loss")
-  plt.plot(np.arange(0, epochs), H.history["val_loss"], label="val_loss")
-  plt.plot(np.arange(0, epochs), H.history["accuracy"], label="train_acc")
-  plt.plot(np.arange(0, epochs), H.history["val_accuracy"], label="val_acc")
-  plt.title("Training Loss and Accuracy")
-  plt.xlabel("Epoch #")
-  plt.ylabel("Loss/Accuracy")
-  plt.legend()
-  plt.tight_layout()
-  plt.show()
-  fig.savefig("../output/DL_performance.png")
+    """
+    Utility function for plotting model history using matplotlib
+    H: model history 
+    epochs: number of epochs for which the model was trained
+    """
+    plt.style.use("fivethirtyeight")
+    fig = plt.figure()
+    plt.plot(np.arange(0, epochs), H.history["loss"], label="train_loss")
+    plt.plot(np.arange(0, epochs), H.history["val_loss"], label="val_loss")
+    plt.plot(np.arange(0, epochs), H.history["accuracy"], label="train_acc")
+    plt.plot(np.arange(0, epochs), H.history["val_accuracy"], label="val_acc")
+    plt.title("Training Loss and Accuracy")
+    plt.xlabel("Epoch #")
+    plt.ylabel("Loss/Accuracy")
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+    fig.savefig("../output/DL_performance.png")
   
-def create_embedding_matrix(filepath, word_index, embedding_dim):
+ def create_embedding_matrix(filepath, word_index, embedding_dim):
   """ 
   A helper function to read in saved GloVe embeddings and create an embedding matrix
   filepath: path to GloVe embedding
