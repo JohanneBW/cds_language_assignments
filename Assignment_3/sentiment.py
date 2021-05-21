@@ -25,13 +25,13 @@ def main():
     ---------- Filepaths ----------
     """
     # Defining the filepath where the data file is located
-    filepath = os.path.join("data","abcnews-date-text.csv")
+    filepath = os.path.join("..","data","abcnews-date-text.csv")
     # Defining the filepath were the data is going to be stored
-    df_path = os.path.join("output", "sentiment_df.csv")
+    df_path = os.path.join("..", "output", "sentiment_df.csv")
     # Defining the filepath were the 1 week average plot is going to be stored
-    week_path = os.path.join("output", "week_plot.png")
+    week_path = os.path.join("..", "output", "week_plot.png")
     # Defining the filepath were the 1 month average plot is going to be stored
-    month_path = os.path.join("output", "month_plot.png")
+    month_path = os.path.join("..", "output", "month_plot.png")
     
     # I use a pandas data frame to get an overview of the data
     data_df = pd.read_csv(filepath)
