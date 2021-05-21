@@ -1,4 +1,4 @@
-## Assignment 6 - Creating reusable network analysis pipeline
+## Assignment 4 - Creating reusable network analysis pipeline
 **Johanne BW**
 
 The purpose with this assignment is to make a command-line tool which will take a given dataset and perform simple network analysis. 
