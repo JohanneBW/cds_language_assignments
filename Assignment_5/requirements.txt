@@ -1,4 +1,3 @@
-pprint
 pandas
 spacy
 seaborn
