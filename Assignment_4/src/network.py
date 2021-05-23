@@ -122,8 +122,9 @@ def main():
     # Plot it                                                      
     fig = nx.draw_random(G, with_labels=False, node_size=20, font_size=10)
     
-    # Save the vizualization in the viz folder                             
-    plt.savefig("viz/network.png", dpi=300, bbox_inches="tight")  
+    # Save the vizualization in the viz folder   
+    viz_output = os.path.join("..", "viz", "network.png")                             
+    plt.savefig(viz_output, dpi=300, bbox_inches="tight")  
                                  
 
     """
@@ -147,7 +148,8 @@ def main():
     measure_df = pd.merge(measure_df, filtered, how="inner", on=["nodeA"])
     
     # Save the merged df as a csv in the output folder                             
-    measure_df.to_csv("../output/measure.csv")
+    df_output = os.path.join("..", "output", "measure.csv") 
+    measure_df.to_csv(df_output)
                                  
     print("DONE, the vizualization is located in the 'viz' folder and the csv is located in the 'output' folder")                           
                                  
