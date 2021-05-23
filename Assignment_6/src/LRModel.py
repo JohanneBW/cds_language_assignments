@@ -62,6 +62,7 @@ def plot_history(H, epochs):
     plt.legend()
     plt.tight_layout()
     plt.show()
+    fig.savefig("../output/LR_performance.png")
     
 def create_embedding_matrix(filepath, word_index, embedding_dim):
     """ 
