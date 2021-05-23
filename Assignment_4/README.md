@@ -7,12 +7,12 @@ I didn’t work with others on this assignment.
 
 __Assignment description__
 
-The purpose with this assignment is to make a command-line tool which will take a given dataset and perform simple network analysis. In particular, it will build networks based on entities appearing to-gether in the same documents. For any given CSV file, with a column called 'text', create a weighed edge list of named entities based on document co-occurrence. This will be used to create a network visualization and also create a data frame showing the degree, betweenness, and eigenvector centrality for each node. 
+The purpose with this assignment is to make a command-line tool which will take a given dataset and perform simple network analysis. In particular, it will build networks based on entities appearing together in the same documents. For any given CSV file, with a column called 'text', create a weighed edge list of named entities based on document co-occurrence. This will be used to create a network visualization and also create a data frame showing the degree, betweenness, and eigenvector centrality for each node. 
 
 
 __Methods__
 
-I primarily used SpaCy and NetworkX in this task. I used SpaCy to create text entities based on the input file and NetworkX was used to plot the visualization as well as calculate betweenness- and ei-genvector centrality. 
+I primarily used SpaCy and NetworkX in this task. I used SpaCy to create text entities based on the input file and NetworkX was used to plot the visualization as well as calculate betweenness- and eigenvector centrality. 
 
 __Usage__
 _Structure:_
@@ -21,7 +21,7 @@ The repository contains the folders data, src, viz and output. The data folder c
 _Arguments:_
 It is possible to select the text on which you want to create a network. This is done by specifying the path that leads to the csv file you want. This is done by "-i" or "--path" when running the script. The script has a default text, king_james_bible.csv located in the data folder, so it is easier to test.
 
-I have created a bash script that creates and activates a virtual environment, retrieves necessary librar-ies from the requirements.txt file and runs the script for the assignment.
+I have created a bash script that creates and activates a virtual environment, retrieves necessary libraries from the requirements.txt file and runs the script for the assignment.
 
 ## How to run
 The following shows how to set up the virtual environment and run the script step by step.
