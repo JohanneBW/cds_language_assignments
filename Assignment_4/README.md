@@ -1,5 +1,5 @@
 ## Assignment 4 - Creating reusable network analysis pipeline
-**Johanne BW**
+**Johanne Brandhøj Würtz**
 
 __Contribution__
 
