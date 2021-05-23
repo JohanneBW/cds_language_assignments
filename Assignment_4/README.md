@@ -15,6 +15,7 @@ __Methods__
 I primarily used SpaCy and NetworkX in this task. I used SpaCy to create text entities based on the input file and NetworkX was used to plot the visualization as well as calculate betweenness- and eigenvector centrality. 
 
 __Usage__
+
 _Structure:_
 The repository contains the folders data, src, viz and output. The data folder contains the csv file king_james_bible.csv. This file will be used as a default if another path isn’t defined when running the script from the command-line. The src folder contains the script network.py which create the text enti-ties and creates a network. The viz folder contains the visualization output, and the output folder con-tains the csv file with information about betweenness- and eigenvector centrality.  
 
