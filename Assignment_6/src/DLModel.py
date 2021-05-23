@@ -160,7 +160,7 @@ def main():
     # Set the embedding dimension to 50
     embedding_dim = 50
     # Create embedding_matrix
-    embedding_matrix = create_embedding_matrix('data/glove.6B.50d.txt',
+    embedding_matrix = create_embedding_matrix('../data/glove.6B.50d.txt',
                                                tokenizer.word_index, 
                                                embedding_dim)
     # New model
