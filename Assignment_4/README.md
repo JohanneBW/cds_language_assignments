@@ -47,7 +47,7 @@ bash create_venv.sh
 - Navigate to the folder "Assignment_4" if you are not already there
 - Run the program with a csv as input:
 ```console
-python3 assignment_4.py -i "data/king_james_bible.csv"
+python3 network.py -i "../data/king_james_bible.csv"
 ```  
 **step 3: Output:**
 - Check the 'viz' and 'output' folder to see vizualization and edgelist
