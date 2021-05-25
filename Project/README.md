@@ -15,7 +15,7 @@ __Assignment description__
  ```console
  git clone https://github.com/JohanneBW/cds_language_assignments.git
  ```
-**step 2: Set up enviroment, download pretrained embeddigs and run program:**
+**Step 2: Set up enviroment and run program:**
 - Navigate to the folder "Project".
 ```console
 cd cds_language_assignments
