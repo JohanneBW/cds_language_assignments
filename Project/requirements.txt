@@ -1,6 +1,4 @@
 pandas
 matplotlib
 spacy
-itertools
-collections
 networkx
