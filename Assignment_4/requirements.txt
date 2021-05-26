@@ -3,3 +3,4 @@ numpy
 argparse
 spacy
 networkx
+matplotlib
