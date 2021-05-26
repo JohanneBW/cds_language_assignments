@@ -109,8 +109,8 @@ def main():
     ----------- Filter based on edgeweight -----------
     """                                 
     
-                                 
-    filtered = edges_df[edges_df["weight"]>500]                            
+    #Only use the nodes with a weight on more than 100                             
+    filtered = edges_df[edges_df["weight"]>100]                            
                                  
                                  
     """
