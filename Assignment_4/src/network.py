@@ -31,7 +31,7 @@ def main():
     ---------- Parameters ----------
     """
     # Create an argument parser from argparse
-    ap = argparse.ArgumentParser(description = "[INFO] Create a weighed edgelist of named entities, based on document co-ocurrence"
+    ap = argparse.ArgumentParser(description = "[INFO] Create a weighed edgelist of named entities, based on document co-ocurrence")
                                  
     # File 
     ap.add_argument("-i", "--path", default = "../data/king_james_bible.csv", help="Path to data folder")  
@@ -58,7 +58,7 @@ def main():
     """
     
     # Create empty list were the entities will be stored
-   text_entities = []
+    text_entities = []
 
     for text in tqdm(data_df["text"]):
         # create temporary list 
